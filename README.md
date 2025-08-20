@@ -1,5 +1,7 @@
 # Music Dashboard Lab
 
+![Demonstration of finished music player](assets/music_player_demo.png)
+
 **Week 9 Mini Project: HTML + CSS + JavaScript**
 
 Welcome to your capstone project for Week 9! You'll build an interactive music dashboard that showcases how HTML, CSS, and JavaScript work together to create dynamic web applications.
@@ -18,9 +20,15 @@ We'll focus on Stage 1 first, creating a stunning visual foundation that JavaScr
 
 ---
 
-## 📋 Stage 1: Build Your Visual Dashboard
+## 🛠️ Getting Started with Stage 1
 
-### Layout Overview
+**Your Mission**: Build a beautiful, complete music dashboard interface using HTML and CSS.
+
+### Step 1: Set Up Your Files
+1. Create `index.html` and `style.css` files
+2. Run `npm install` to set up testing
+
+### Step 2: Plan Your Layout
 
 Your music dashboard needs three main sections:
 
@@ -41,6 +49,18 @@ Your music dashboard needs three main sections:
 │  [Album Art] [Current Song Info] [▶️ ⏮️ ⏭️] │
 └───────────────────────────────────────────┘
 ```
+
+### Step 3: Build and Style Creatively!
+
+**Creative Freedom**: Make this dashboard your own! You have complete creative control over colors, fonts, spacing, and visual effects. The wireframe above shows the layout structure, but the styling is entirely up to you.
+
+**As you build, test frequently**: Run `npm test` to make sure your structure will work with JavaScript later.
+
+---
+
+## 📋 Stage 1: Detailed Requirements
+
+*Use this section as a reference while building - you don't need to memorize everything upfront!*
 
 ### 🏗️ Required Structure & IDs
 
@@ -115,7 +135,7 @@ For consistent styling, use these emoji icons:
 
 ### 🎨 Design Guidelines
 
-**Creative Freedom**: Make this dashboard your own! The layout structure above is required, but you have complete creative control over:
+**Creative Freedom**: Make this dashboard your own! The layout structure above is required, but how it is styled is up to you. The screenshot is just an example of how your music player might look. You have complete creative control over:
 
 - **Colors & Theme**: Dark mode, light mode, colorful, monochrome - your choice!
 - **Typography**: Font families, sizes, weights
@@ -175,15 +195,5 @@ In Stage 2, you'll learn how JavaScript can:
 - Show visual feedback for the current song
 
 The beautiful interface you're building now will become the canvas that JavaScript brings to life!
-
----
-
-## 🛠️ Getting Started
-
-1. Create your `index.html` and `style.css` files
-2. Build the HTML structure with required IDs and classes
-3. Style your dashboard with CSS
-4. Test frequently with `npm test`
-5. Refine until everything looks great and tests pass!
 
 **Remember**: Focus on creating something you're proud of. This is your chance to showcase everything you've learned about HTML and CSS while preparing for the JavaScript magic to come!
