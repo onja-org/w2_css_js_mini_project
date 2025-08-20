@@ -1,0 +1,20 @@
+{
+  "name": "music-dashboard-lab",
+  "version": "1.0.0",
+  "description": "Week 9 Mini Project: HTML + CSS + JavaScript Music Dashboard",
+  "main": "index.html",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "jest": {
+    "testTimeout": 10000,
+    "setupFilesAfterEnv": [
+      "<rootDir>/jest.setup.js"
+    ]
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "puppeteer": "^21.0.0"
+  }
+}
