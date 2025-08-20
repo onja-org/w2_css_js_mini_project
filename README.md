@@ -2,9 +2,9 @@
 
 ![Demonstration of finished music player](assets/music_player_demo.png)
 
-**Week 9 Mini Project: HTML + CSS + JavaScript**
+**Mini Project: HTML + CSS + JavaScript**
 
-Welcome to your capstone project for Week 9! You'll build an interactive music dashboard that showcases how HTML, CSS, and JavaScript work together to create dynamic web applications.
+Welcome to your capstone project for the week! You'll build an interactive music dashboard that showcases how HTML, CSS, and JavaScript work together to create dynamic web applications.
 
 This project embodies the theme: **"CSS creates possibilities, JavaScript activates them."**
 
@@ -73,7 +73,7 @@ Your music dashboard needs three main sections:
 #### Sidebar Section  
 - Container with class `sidebar`
 - Include logo/branding area
-- Add navigation menu (can be decorative for now)
+- Add navigation menu (it doesn't need to do anything, just look nice)
 
 #### Main Content Section
 - Container with class `main-content`  
@@ -112,7 +112,7 @@ Use these songs in your playlist (feel free to swap in your favorites!):
 
 ### 🎨 Button Icons & Symbols
 
-For consistent styling, use these emoji icons:
+For consistent styling, use these emoji icons (you can just copy and paste them into your HTML):
 
 **Control Buttons:**
 - Play: ▶️
@@ -205,6 +205,8 @@ The key insight: **JavaScript doesn't create the visual effects - it just tells 
 ### Step 1: Get Your Starter Code
 
 1. Copy the starter JavaScript file to `script.js`:
+- make sure you are in the root of the project by typing `pwd` and ensuring it ends in `.../w2_css_js_mini_project` 
+- then type this in your terminal to copy the starter code:
 
 ```bash
 cp script-starter.js script.js
@@ -321,16 +323,16 @@ The `playCurrentSong()` and `pauseSong()` functions are already provided - they 
 - Click songs while playing → switches to the new song immediately
 - Click next/prev → changes songs and keeps playing if you were playing
 
-### Step 5: Customize Your Songs (Important!)
+### Step 5: Customize Your Songs
 
 **If you changed the song list in your HTML**, update the `songs` array at the top of `script.js` to match. The array order must match your HTML song order.
 
-For example, if your first song is "Thunderstruck" by AC/DC, make sure the first object in the array has:
+For example, if your first song is "Wide Open Spaces" by The Chicks, make sure the first object in the array has:
 ```javascript
 {
-    title: "Thunderstruck",
-    artist: "AC/DC", 
-    duration: "4:52"
+    title: "Wide Open Spaces",
+    artist: "The Chicks", 
+    duration: "3:44"
 }
 ```
 
@@ -370,6 +372,4 @@ Want to add more features? Try these extensions:
 
 ## 🆘 Need Help?
 
-If you get stuck on Stage 1, you can check the `solution` branch to see one approach to the styling and structure. Remember, there are many valid ways to achieve the requirements - the solution is just one example!
-
-**Remember**: Focus on creating something you're proud of. This is your chance to showcase everything you've learned about HTML and CSS while preparing for the JavaScript magic to come!
+If you get stuck on Stage 1, you can check the `solution` branch to see one approach to the styling and structure. [Here is a guide](https://www.howtogeek.com/789268/how-to-switch-branches-in-github/) on how to switch branches if you need help. Remember, there are many valid ways to achieve the requirements - the solution is just one example!

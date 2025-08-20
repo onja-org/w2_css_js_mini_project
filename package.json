@@ -1,7 +1,7 @@
 {
   "name": "music-dashboard-lab",
   "version": "1.0.0",
-  "description": "Week 9 Mini Project: HTML + CSS + JavaScript Music Dashboard",
+  "description": "Mini Project: HTML + CSS + JavaScript Music Dashboard",
   "main": "index.html",
   "scripts": {
     "test": "jest",
