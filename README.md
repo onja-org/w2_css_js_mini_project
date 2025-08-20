@@ -150,6 +150,23 @@ For consistent styling, use these emoji icons (you can just copy and paste them 
 - Ensure text is readable and elements are visually distinct
 - Track items should look clickable (hint: `cursor: pointer`)
 
+**Important for JavaScript Integration**:
+- **Style the `.playing` state**: Create CSS rules for `.track-item.playing` to show which song is currently selected/playing. This class will be added dynamically by JavaScript! Make it visually distinct - perhaps a different background color, border, or text color.
+
+Example approaches for the playing state:
+```css
+.track-item.playing {
+    background: #your-accent-color;
+    border-left: 3px solid #your-highlight-color;
+}
+
+/* Or change text colors */
+.track-item.playing .track-title {
+    color: #your-highlight-color;
+    font-weight: bold;
+}
+```
+
 **Responsive Considerations**:
 - Design for desktop first (mobile adaptation comes later)
 - Make sure content doesn't overflow containers
