@@ -142,6 +142,7 @@ For consistent styling, use these emoji icons:
 - **Spacing**: Padding, margins, gap sizes  
 - **Visual Effects**: Gradients, shadows, borders, animations
 - **Hover States**: How elements respond to mouse interaction
+- **Music Selection**: Which songs you include in the playlist (Make sure to update the JavaScript file later to match your choices! We'll remind you in the next stage.)
 
 **Layout Requirements**:
 - Use CSS Grid or Flexbox for main layout
@@ -183,17 +184,192 @@ You'll know you're ready for Stage 2 when:
 
 ---
 
-## 🚀 Ready for Stage 2?
+---
 
-Once your visual foundation is complete and tests are passing, you'll move to Stage 2 where we add JavaScript to make everything interactive!
+## 🚀 Stage 2: Adding JavaScript Magic
 
-In Stage 2, you'll learn how JavaScript can:
-- Make songs selectable by clicking
-- Update the "Now Playing" display
-- Control the play/pause button  
-- Navigate between tracks
-- Show visual feedback for the current song
+**Prerequisites**: Stage 1 complete with all tests passing ✅
 
-The beautiful interface you're building now will become the canvas that JavaScript brings to life!
+Welcome to Stage 2! Now we'll bring your beautiful interface to life with JavaScript. You'll see how **"CSS creates possibilities, JavaScript activates them"** in action.
+
+### Understanding the Approach
+
+JavaScript will work with the HTML structure you built by:
+- **Finding elements** using the IDs you created (`playBtn`, `currentTitle`, etc.)
+- **Listening for clicks** on buttons and song items
+- **Changing CSS classes** to trigger your existing styles (like adding `.playing` class)
+- **Updating text content** to show current song information
+
+The key insight: **JavaScript doesn't create the visual effects - it just tells your CSS when to show them!**
+
+### Step 1: Get Your Starter Code
+
+1. Copy the starter JavaScript file to `script.js`:
+
+```bash
+cp script-starter.js script.js
+```
+
+2. Open `script.js` in your editor and take a look around.
+
+**What's already provided:**
+- ✅ Song data array (update this if you changed your playlist!)
+- ✅ State variables (`currentSongIndex`, `isPlaying`, `currentProgress`)
+- ✅ DOM element references (finding all your HTML elements)
+- ✅ Helper functions for updating displays and progress animation
+- ✅ Previous/next navigation logic
+- ✅ Bonus keyboard controls (Space = play/pause, arrows = next/prev)
+
+**What you'll add:**
+- 🎯 Event listeners to connect clicks to functions
+- 🎯 Song selection logic 
+- 🎯 Play/pause toggle logic
+
+### Step 2: Connect Your Buttons (You Code This!)
+
+Find the TODO comment in the `DOMContentLoaded` event listener. This is where you'll connect your HTML buttons to JavaScript functions.
+
+**⌨️ Important: Type this code out rather than copy-pasting!** Typing helps you understand each piece and builds muscle memory.
+
+Add these three event listeners inside the function:
+
+```javascript
+document.addEventListener('DOMContentLoaded', function() {
+    // Connect the control buttons to their functions
+    playBtn.addEventListener('click', togglePlayPause);
+    prevBtn.addEventListener('click', previousSong);  
+    nextBtn.addEventListener('click', nextSong);
+    
+    // Make each song clickable
+    trackItems.forEach((trackItem, index) => {
+        trackItem.addEventListener('click', () => {
+            selectSong(index);
+        });
+    });
+});
+```
+
+**What this does:**
+- When someone clicks the play button → call `togglePlayPause()`
+- When someone clicks prev/next → call `previousSong()` or `nextSong()`
+- When someone clicks any song → call `selectSong()` with that song's number
+
+**Test it:** Save and refresh your page. Try clicking the previous/next buttons. They should work now! (Play button won't work yet - we'll fix that next.)
+
+### Step 3: Make Songs Selectable (You Code This!)
+
+Find the first TODO comment for the `selectSong` function. This is the heart of your music player - it handles when someone clicks a song.
+
+**⌨️ Remember: Type this out!** Feel how the logic flows as you write each line.
+
+Add this function:
+
+```javascript
+function selectSong(index) {
+    // Update which song is current
+    currentSongIndex = index;
+    
+    // Update the displays
+    updateNowPlaying();
+    updateTrackSelection();
+    
+    // If we're already playing, start playing the new song
+    if (isPlaying) {
+        playCurrentSong();
+    }
+}
+```
+
+**What this does:**
+- Updates the `currentSongIndex` variable to track which song is selected
+- Calls helper functions to update the "Now Playing" display and highlight the selected song
+- If music is playing, starts playing the newly selected song
+
+**Test it:** Click on different songs in your list. You should see:
+- The "Now Playing" area updates with the song title and artist
+- The clicked song gets highlighted with your `.playing` CSS styles
+- Try clicking songs while "playing" (after we add the play button in the next step)
+
+### Step 4: Add Play/Pause Control (You Code This!)
+
+Find the TODO comment for the `togglePlayPause` function. This controls the main play button.
+
+**⌨️ Keep typing!** This is the final piece that brings everything together.
+
+Add this function:
+
+```javascript
+function togglePlayPause() {
+    if (isPlaying) {
+        pauseSong();
+    } else {
+        playCurrentSong();
+    }
+}
+```
+
+**What this does:**
+- Checks if music is currently playing
+- If playing → pause it
+- If paused → start playing
+
+The `playCurrentSong()` and `pauseSong()` functions are already provided - they handle updating the button icon, starting/stopping the progress bar, and updating displays.
+
+**Test it:** Now everything should work!
+- Click play → button changes to pause, progress bar starts moving
+- Click pause → button changes to play, progress bar stops
+- Click songs while playing → switches to the new song immediately
+- Click next/prev → changes songs and keeps playing if you were playing
+
+### Step 5: Customize Your Songs (Important!)
+
+**If you changed the song list in your HTML**, update the `songs` array at the top of `script.js` to match. The array order must match your HTML song order.
+
+For example, if your first song is "Thunderstruck" by AC/DC, make sure the first object in the array has:
+```javascript
+{
+    title: "Thunderstruck",
+    artist: "AC/DC", 
+    duration: "4:52"
+}
+```
+
+### Step 6: Test Everything!
+
+Try all these interactions:
+- ✅ Click any song → it becomes selected and shows in "Now Playing"
+- ✅ Click play → button changes to pause, progress bar animates
+- ✅ Click pause → button changes to play, animation stops
+- ✅ Click next/prev → navigates through songs
+- ✅ Progress bar fills → automatically goes to next song
+- ✅ Click songs while playing → immediately switches songs
+- ✅ Keyboard controls work (Space, left/right arrows)
+
+### 🎉 You Did It!
+
+**What you just learned:**
+- How JavaScript **finds HTML elements** using IDs you created
+- How **event listeners** connect user actions to code functions  
+- How JavaScript **manipulates CSS classes** to trigger your visual styles
+- How **state management** tracks what's currently happening (which song, playing/paused)
+- How the **HTML + CSS + JavaScript relationship** works in real applications
+
+**The Big Picture:**
+Your CSS defined all the visual possibilities (colors, layouts, hover effects, playing states). JavaScript just decides *when* to show them. This is the power of separation of concerns - each technology does what it does best!
+
+### 🚀 Going Further (Optional Challenges)
+
+Want to add more features? Try these extensions:
+- **Volume control**: Make the volume slider actually work
+- **Shuffle mode**: Randomize the next song selection  
+- **Repeat modes**: Single song repeat, playlist repeat
+- **Real progress bar**: Click to jump to different parts of songs
+- **Search/filter**: Add a search box to filter the song list
+
+---
+
+## 🆘 Need Help?
+
+If you get stuck on Stage 1, you can check the `solution` branch to see one approach to the styling and structure. Remember, there are many valid ways to achieve the requirements - the solution is just one example!
 
 **Remember**: Focus on creating something you're proud of. This is your chance to showcase everything you've learned about HTML and CSS while preparing for the JavaScript magic to come!
