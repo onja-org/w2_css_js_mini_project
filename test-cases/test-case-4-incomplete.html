@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player - Incomplete</title>
+    <link rel="stylesheet" href="incomplete.css">
+</head>
+<body>
+    <!-- Student who got partway through - has sidebar and main, but controls incomplete -->
+    <div class="music-player">
+        
+        <aside class="sidebar">
+            <div class="brand">
+                <h1>🎧 SoundWave</h1>
+            </div>
+            
+            <nav class="menu">
+                <ul>
+                    <li class="menu-item current">
+                        <span class="icon">🎵</span>
+                        <span class="text">Now Playing</span>
+                    </li>
+                    <li class="menu-item">
+                        <span class="icon">📚</span>
+                        <span class="text">Your Library</span>
+                    </li>
+                    <li class="menu-item">
+                        <span class="icon">💖</span>
+                        <span class="text">Liked Songs</span>
+                    </li>
+                    <li class="menu-item">
+                        <span class="icon">📡</span>
+                        <span class="text">Radio</span>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="page-header">
+                <h1>My Awesome Playlist</h1>
+                <p class="subtitle">The songs that define my soul</p>
+            </header>
+
+            <div class="songs-container">
+                <div class="songs-list" id="trackList">
+                    <div class="song track-item" id="song-0">
+                        <div class="song-number">1</div>
+                        <div class="song-info">
+                            <h3 class="track-title">Bohemian Rhapsody</h3>
+                            <p class="track-artist">Queen</p>
+                        </div>
+                        <div class="song-length">5:55</div>
+                        <div class="song-options">⋯</div>
+                    </div>
+
+                    <div class="song track-item" id="song-1">
+                        <div class="song-number">2</div>
+                        <div class="song-info">
+                            <h3 class="track-title">King</h3>
+                            <p class="track-artist">Florence And The Machine</p>
+                        </div>
+                        <div class="song-length">5:19</div>
+                        <div class="song-options">⋯</div>
+                    </div>
+
+                    <div class="song track-item" id="song-2">
+                        <div class="song-number">3</div>
+                        <div class="song-info">
+                            <h3 class="track-title">Highway Chile</h3>
+                            <p class="track-artist">Jimi Hendrix</p>
+                        </div>
+                        <div class="song-length">3:33</div>
+                        <div class="song-options">⋯</div>
+                    </div>
+
+                    <div class="song track-item" id="song-3">
+                        <div class="song-number">4</div>
+                        <div class="song-info">
+                            <h3 class="track-title">Buffalo Soldier</h3>
+                            <p class="track-artist">Bob Marley</p>
+                        </div>
+                        <div class="song-length">4:16</div>
+                        <div class="song-options">⋯</div>
+                    </div>
+
+                    <div class="song track-item" id="song-4">
+                        <div class="song-number">5</div>
+                        <div class="song-info">
+                            <h3 class="track-title">Patience</h3>
+                            <p class="track-artist">Guns N' Roses</p>
+                        </div>
+                        <div class="song-length">5:55</div>
+                        <div class="song-options">⋯</div>
+                    </div>
+
+                    <div class="song track-item" id="song-5">
+                        <div class="song-number">6</div>
+                        <div class="song-info">
+                            <h3 class="track-title">My Sweet Lord</h3>
+                            <p class="track-artist">George Harrison</p>
+                        </div>
+                        <div class="song-length">4:41</div>
+                        <div class="song-options">⋯</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Controls section is incomplete/missing required elements -->
+        <footer class="controls-section">
+            <div class="current-song">
+                <div class="album-art">🎵</div>
+                <div class="song-info">
+                    <!-- Missing proper IDs -->
+                    <div class="song-title">Nothing playing</div>
+                    <div class="artist-name">Select a song</div>
+                </div>
+            </div>
+            
+            <!-- Missing the main control buttons entirely -->
+            <div class="player-controls">
+                <p>Controls coming soon...</p>
+            </div>
+            
+            <!-- Missing progress bar -->
+            <div class="additional-controls">
+                <div>Volume and other controls</div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

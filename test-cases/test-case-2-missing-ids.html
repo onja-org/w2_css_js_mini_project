@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player - Missing IDs</title>
+    <link rel="stylesheet" href="missing-ids.css">
+</head>
+<body>
+    <!-- Good structure but missing some required IDs -->
+    <div class="music-player">
+        
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>🎵 MyMusic</h2>
+            </div>
+            <nav class="navigation">
+                <ul>
+                    <li class="nav-item active">Now Playing</li>
+                    <li class="nav-item">Library</li>
+                    <li class="nav-item">Favorites</li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header>
+                <h1>Now Playing</h1>
+            </header>
+
+            <div class="track-list-container">
+                <!-- Missing id="trackList" -->
+                <div class="track-list">
+                    <div class="track-item" id="song-0">
+                        <div class="track-number">01</div>
+                        <div class="track-info">
+                            <div class="track-title">Bohemian Rhapsody</div>
+                            <div class="track-artist">Queen</div>
+                        </div>
+                        <div class="track-duration">5:55</div>
+                    </div>
+
+                    <div class="track-item" id="song-1">
+                        <div class="track-number">02</div>
+                        <div class="track-info">
+                            <div class="track-title">King</div>
+                            <div class="track-artist">Florence And The Machine</div>
+                        </div>
+                        <div class="track-duration">5:19</div>
+                    </div>
+
+                    <div class="track-item" id="song-2">
+                        <div class="track-number">03</div>
+                        <div class="track-info">
+                            <div class="track-title">Highway Chile</div>
+                            <div class="track-artist">Jimi Hendrix</div>
+                        </div>
+                        <div class="track-duration">3:33</div>
+                    </div>
+
+                    <div class="track-item" id="song-3">
+                        <div class="track-number">04</div>
+                        <div class="track-info">
+                            <div class="track-title">Buffalo Soldier</div>
+                            <div class="track-artist">Bob Marley</div>
+                        </div>
+                        <div class="track-duration">4:16</div>
+                    </div>
+
+                    <div class="track-item" id="song-4">
+                        <div class="track-number">05</div>
+                        <div class="track-info">
+                            <div class="track-title">Patience</div>
+                            <div class="track-artist">Guns N' Roses</div>
+                        </div>
+                        <div class="track-duration">5:55</div>
+                    </div>
+
+                    <div class="track-item" id="song-5">
+                        <div class="track-number">06</div>
+                        <div class="track-info">
+                            <div class="track-title">My Sweet Lord</div>
+                            <div class="track-artist">George Harrison</div>
+                        </div>
+                        <div class="track-duration">4:41</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="controls-section">
+            <div class="now-playing-info">
+                <div class="song-details">
+                    <!-- Missing id="currentTitle" -->
+                    <div class="current-title">Select a song</div>
+                    <div class="current-artist" id="currentArtist">No song playing</div>
+                </div>
+            </div>
+
+            <div class="playback-controls">
+                <!-- Missing id="prevBtn" -->
+                <button class="control-btn" id="previous-btn">⏮️</button>
+                <button class="control-btn primary" id="playBtn">▶️</button>
+                <button class="control-btn" id="nextBtn">⏭️</button>
+            </div>
+
+            <div class="progress-section">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
