@@ -12,11 +12,12 @@ The project embodies the theme: **"CSS creates possibilities, JavaScript activat
 
 ```
 ├── README.md                 # This overview
+├── package.json              # Testing dependencies and project configuration
+├── .gitignore               # Git ignore rules
 ├── assets/
 │   └── music_player_demo.png # Demo image
 └── lab/
     ├── README.md             # Detailed lab instructions
-    ├── package.json          # Testing dependencies
     ├── jest.setup.js         # Test configuration
     ├── script-starter.js     # JavaScript starter code
     └── test.js              # Automated tests

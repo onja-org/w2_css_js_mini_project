@@ -17,7 +17,7 @@ We'll focus on Stage 1 first, creating a stunning visual foundation that JavaScr
 ### Step 1: Set Up Your Files
 1. `cd lab`
 2. Create `index.html` and `style.css` files
-3. Run `npm install` to set up testing
+3. Navigate to the project root (`cd ..`) and run `npm install` to set up testing
 
 ### Step 2: Plan Your Layout
 
@@ -45,7 +45,7 @@ Your music dashboard needs three main sections:
 
 **Creative Freedom**: Make this dashboard your own! You have complete creative control over colors, fonts, spacing, and visual effects. The wireframe above shows the layout structure, but the styling is entirely up to you.
 
-**As you build, test frequently**: Run `npm test` to make sure your structure will work with JavaScript later.
+**As you build, test frequently**: Navigate to the project root (`cd ..`) and run `npm test` to make sure your structure will work with JavaScript later.
 
 ---
 
@@ -166,6 +166,7 @@ Example approaches for the playing state:
 Run the tests to verify your structure is ready for JavaScript integration:
 
 ```bash
+cd .. # Navigate to project root if you're in the lab folder
 npm install
 npm test
 ```
@@ -212,8 +213,8 @@ The key insight: **JavaScript doesn't create the visual effects - it just tells 
 ### Step 1: Get Your Starter Code
 
 1. Copy the starter JavaScript file to `script.js`:
-- make sure you are in the root of the project by typing `pwd` and ensuring it ends in `.../w2_css_js_mini_project` 
-- then type this in your terminal to copy the starter code:
+- Make sure you are in the lab directory by typing `pwd` and ensuring it ends in `.../w2_css_js_mini_project/lab` 
+- Then type this in your terminal to copy the starter code:
 
 ```bash
 cp script-starter.js script.js

@@ -3,7 +3,7 @@ const fs = require("fs");
 const path = require("path");
 
 // Test configuration
-const TEST_URL = `file://${path.resolve("index.html")}`;
+const TEST_URL = `file://${path.resolve("lab/index.html")}`;
 
 let browser, page;
 
@@ -31,8 +31,8 @@ async function elementExistsWithId(selector, id) {
 
 describe("Music Dashboard Structure Tests", () => {
   test("HTML file exists and is valid", () => {
-    expect(fs.existsSync("index.html")).toBe(true);
-    expect(fs.existsSync("style.css")).toBe(true);
+    expect(fs.existsSync("lab/index.html")).toBe(true);
+    expect(fs.existsSync("lab/style.css")).toBe(true);
   });
 
   test("Page loads successfully", async () => {
