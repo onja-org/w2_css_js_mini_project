@@ -4,14 +4,14 @@
   "description": "Mini Project: HTML + CSS + JavaScript Music Dashboard",
   "main": "index.html",
   "scripts": {
-    "test": "jest lab/test.js",
-    "test:watch": "jest lab/test.js --watch",
+    "test": "jest lab/tests/test.js",
+    "test:watch": "jest lab/tests/test.js --watch",
     "submit": "node lab/tests/generate-test-report.js && bash scripts/submit.sh"
   },
   "jest": {
     "testTimeout": 10000,
     "setupFilesAfterEnv": [
-      "<rootDir>/lab/jest.setup.js"
+      "<rootDir>/lab/tests/jest.setup.js"
     ]
   },
   "devDependencies": {
