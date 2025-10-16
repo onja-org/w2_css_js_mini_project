@@ -58,10 +58,37 @@ const trackItems = document.querySelectorAll('.track-item');
 
 // Initialize everything when the page loads
 document.addEventListener('DOMContentLoaded', function() {
-    // TODO: You'll add the event listeners here in Step 1
+    // Connect the control buttons to their functions
+    playBtn.addEventListener('click', togglePlayPause);
+    prevBtn.addEventListener('click', previousSong);  
+    nextBtn.addEventListener('click', nextSong);
+    
+    // Make each song clickable
+    trackItems.forEach((trackItem, index) => {
+        trackItem.addEventListener('click', () => {
+            selectSong(index);
+        });
+    });
+    
+    // Initialize the display
+    updateNowPlaying();
+    updateTrackSelection();
 });
 
-// TODO: You'll write the selectSong function here in Step 2
+// Select and switch to a specific song
+function selectSong(index) {
+    // Update which song is current
+    currentSongIndex = index;
+    
+    // Update the displays
+    updateNowPlaying();
+    updateTrackSelection();
+    
+    // If we're already playing, start playing the new song
+    if (isPlaying) {
+        playCurrentSong();
+    }
+}
 
 // Update the "Now Playing" display with current song info
 function updateNowPlaying() {
@@ -83,7 +110,14 @@ function updateTrackSelection() {
     }
 }
 
-// TODO: You'll write the togglePlayPause function here in Step 3
+// Toggle between play and pause
+function togglePlayPause() {
+    if (isPlaying) {
+        pauseSong();
+    } else {
+        playCurrentSong();
+    }
+}
 
 // Play the current song (called by togglePlayPause)
 function playCurrentSong() {
