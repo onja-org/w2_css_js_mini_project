@@ -5,7 +5,8 @@
   "main": "index.html",
   "scripts": {
     "test": "jest lab/test.js",
-    "test:watch": "jest lab/test.js --watch"
+    "test:watch": "jest lab/test.js --watch",
+    "submit": "node lab/tests/generate-test-report.js && bash scripts/submit.sh"
   },
   "jest": {
     "testTimeout": 10000,
